@@ -1,0 +1,147 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+
+    --primary-color: #7a00ff;
+  
+}
+
+/* common styles */
+.btn{
+    background-color: var(--primary-color);
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background-color: #7b00ffb3;
+}
+
+input{
+   padding: 10px 40px;
+   border: 2px solid gray;
+   border-radius: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction:  column;
+}
+
+form > label{
+    color: black;
+    font-size: 1.8rem;
+    padding: 20px 0px;
+}
+
+/* navbar  */
+
+nav {
+    background-color: #b90aee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+nav > .logo{
+    margin: 30px 0px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+li {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+li>a{
+    text-decoration: none;
+}
+
+
+/* home  */
+.home-image-container{
+    position: relative;
+    height: 88vh;
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.home-text-container{
+    position: absolute;
+    left: 90px;
+
+}
+.home-text-container >h1{
+    font-weight: bold;
+    margin:  40px 0;
+    font-size: 3rem;
+}
+
+/* login */
+
+.login-container{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.login-container > h1{
+    color: black;
+    font-size: 3rem;
+
+}
+
+
+/* Preview */
+.preview-container{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.preview-container >h1{
+    color: black;
+    font-size: 2.3rem;
+}
+
+.preview-container > form > input {
+     margin: 60px 0;
+}
+
+/* live view */
+.live-container{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.live-container > div{
+    border: 2px solid var(--primary-color);
+    background-color: rgb(165, 165, 165);
+    width: 50vw;
+    height: 50vh;
+}
