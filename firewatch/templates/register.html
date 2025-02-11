@@ -2,20 +2,29 @@
 {% load static %}
 {% block title %} Register {% endblock title %}
 {% block container %}
+
 <div class="login-container">
     <h1>Register</h1>
+
     <div>
-        <form action="">
-            <label for="username">Username</label>
-            <input type="text" name="Username" id="Username">
-            <label for="username">Password</label>
-            <input type="password" name="Password" id="Password">
+        <form method="POST">  
+            {% csrf_token %}  
+            
+            <label for="Username">Username</label>
+            <input type="text" name="Username" id="Username" required style="color: black; font-size: 1.5rem;">
+            
+            <label for="Password">Password</label>
+            <input type="password" name="Password" id="Password" required style="color: black; font-size: 1.5rem;">
+            
             <input type="submit" value="Register" class="btn">
         </form>
     </div>
+
     <div>
-        <p style="color: black; font-size: 1.4rem;">If already have an account  <a href="{% url 'login' %}" style="color: blue;">Click
-                me</a></p>
+        <p style="color: black; font-size: 1.4rem;">
+            If you already have an account, <a href="{% url 'login' %}" style="color: blue;">Click here</a>
+        </p>
     </div>
 </div>
+
 {% endblock container %}
