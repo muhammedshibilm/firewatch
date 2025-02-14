@@ -1,12 +1,32 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Preview {% endblock title %}
+
+{% block title %} Upload Image {% endblock title %}
+
 {% block container %}
+<style>
+    label {
+        color: black;
+        font-size: 1.5rem;
+        padding-right: 30px;
+    }
+
+    input{
+        color: black !important;
+        font-size: 1rem;
+    }
+</style>
+
 <div class="preview-container">
-     <h1>Upload Image</h1>
-     <form action="">
-        <input type="file" >
-        <input type="submit" value="submit" class="btn">
-     </form>
+    <h1>Upload Image</h1>
+
+    <form method="POST" enctype="multipart/form-data" style="color: black;">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Upload" class="btn">
+    </form>
+
+    <br>
 </div>
 {% endblock container %}

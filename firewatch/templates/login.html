@@ -1,31 +1,38 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block title %} Login {% endblock title %}
-{% block container %}
-
-<div class="login-container">
-    <h1>Login</h1>
-
-
-    <div>
-        <form method="POST">  
-            {% csrf_token %}  
-
-            <label for="Username">Username</label>
-            <input type="text" name="Username" id="Username" required style="color: black; font-size: 1.5rem;">
-            
-            <label for="Password">Password</label>
-            <input type="password" name="Password" id="Password" required style="color: black; font-size: 1.5rem;">
-            
-            <input type="submit" value="Login" class="btn">
-        </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+    
+    
+        <div>
+            <form method="POST">  
+                {% csrf_token %}  
+    
+                <label for="Username">Username</label>
+                <input type="text" name="Username" id="Username" required style="color: black; font-size: 1.5rem;">
+                
+                <label for="Password">Password</label>
+                <input type="password" name="Password" id="Password" required style="color: black; font-size: 1.5rem;">
+                
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+    
+        <div>
+            <p style="color: black; font-size: 1.4rem;">
+                If you don’t have an account, <a href="{% url 'register' %}" style="color: blue;">Click here</a>
+            </p>
+        </div>
     </div>
+</body>
+</html>
 
-    <div>
-        <p style="color: black; font-size: 1.4rem;">
-            If you don’t have an account, <a href="{% url 'register' %}" style="color: blue;">Click here</a>
-        </p>
-    </div>
-</div>
 
-{% endblock container %}
+
